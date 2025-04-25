@@ -1,0 +1,10 @@
+services:
+  jenkins:
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    image: poncial/jenkins:latest
+    container_name: jenkins
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+    
